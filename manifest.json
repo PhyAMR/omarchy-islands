@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "phuniverse.islands",
+  "name": "Islands",
+  "version": "1.0.0",
+  "author": "phuniverse",
+  "license": "MIT",
+  "description": "Groups bar widgets into floating islands and redraws their glyphs as thin line icons",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Island.qml"
+  },
+  "barWidget": {
+    "displayName": "Island",
+    "description": "Starts an island: every widget after it, up to the next Island, shares one pill. A trailing Island closes the section.",
+    "category": "Layout",
+    "allowMultiple": true,
+    "defaultSection": "left",
+    "schema": [
+      { "key": "padding", "type": "integer", "label": "Inner padding", "min": 0, "max": 24, "step": 1, "defaultValue": 6 },
+      { "key": "gap", "type": "integer", "label": "Gap between islands", "min": 0, "max": 40, "step": 1, "defaultValue": 8 },
+      { "key": "lineIcons", "type": "boolean", "label": "Line icons", "defaultValue": true }
+    ]
+  }
+}
